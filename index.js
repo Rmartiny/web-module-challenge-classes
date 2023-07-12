@@ -44,6 +44,15 @@ class Airplane {
 */
 
 class Person {
+  constructor (props){
+    this.name = props.name;
+    this.age = props.age;
+    
+
+  }
+   eat(){
+
+   }
   
 }
 
