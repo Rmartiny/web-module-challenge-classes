@@ -75,6 +75,15 @@ class Person {
 */
 
 class Car {
+  constructor(props){
+    this.model= props.model;
+    this.milesPerGallon = props.milesPerGallon;
+    this.tank = 0;
+    this.odometer = 0;
+  }
+  fill(gallons){this.tank.push(gallons)};
+  drive(distance){ this.odometer.push(distance)}
+
   
 }
 
