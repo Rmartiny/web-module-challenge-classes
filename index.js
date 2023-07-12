@@ -108,7 +108,7 @@ class Car {
 */
 
 class Lambdasian {
-  constructor(name,age,location) {
+  constructor({name,age,location}) {
     this.name =name;
     this.age = age;
     this.location = location;
@@ -136,8 +136,8 @@ class Lambdasian {
 */
 
 class Instructor extends Lambdasian { 
-  constructor(name,age,location,speciality,favLanguage,catchPhrase){ 
-    super(name,age,location,speciality,favLanguage,catchPhrase);
+  constructor({name,age,location,speciality,favLanguage,catchPhrase}){ 
+    super({name,age,location,speciality,favLanguage,catchPhrase});
     this.speciality= speciality;
     this.favLanguage = favLanguage;
     this.catchPhrase = catchPhrase;
@@ -163,8 +163,8 @@ grade(subject){return `${Student.name} Recives a prefect score on ${subject}`}
         + `sprintChallenge` similar to PRAssignment but returns `student.name has begun sprint challenge on {subject}`
 */
 
-class Student extends Lambdasian { constructor (name,age,location,speciality,favLanguage,catchPhrase,previousBackground,className,favSubject){
-  super(name,age,location,speciality,favLanguage,catchPhrase,previousBackground,className,favSubject);
+class Student extends Lambdasian { constructor ({name,age,location,speciality,favLanguage,catchPhrase,previousBackground,className,favSubject}){
+  super({name,age,location,speciality,favLanguage,catchPhrase,previousBackground,className,favSubject});
   this.previousBackground= previousBackground;
   this.className= className;
   this.favSubject= favSubject;
@@ -190,8 +190,8 @@ sprintChallenge(subject){ return `${Student.name} has begun sprint challenge on 
         + `debugsCode` a method that takes in a student object and a subject and returns `{name} debugs {student.name}'s code on {subject}`
 */
 
-class ProjectManager extends Instructor { constructor(name,age,location,speciality,favLanguage,catchPhrase,previousBackground,className,favSubject,gradClassName,favInstructor){
-  super(name,age,location,speciality,favLanguage,catchPhrase,previousBackground,className,favSubject,gradClassName,favInstructor);
+class ProjectManager extends Instructor { constructor({name,age,location,speciality,favLanguage,catchPhrase,previousBackground,className,favSubject,gradClassName,favInstructor}){
+  super({name,age,location,speciality,favLanguage,catchPhrase,previousBackground,className,favSubject,gradClassName,favInstructor});
   this.gradClassName= gradClassName;
   this.favInstructor =favInstructor;
 }
