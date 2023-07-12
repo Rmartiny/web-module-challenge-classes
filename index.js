@@ -136,9 +136,9 @@ class Lambdasian {
 */
 
 class Instructor extends Lambdasian { 
-  constructor({name,age,location,speciality,favLanguage,catchPhrase}){ 
-    super({name,age,location,speciality,favLanguage,catchPhrase});
-    this.speciality = speciality;
+  constructor({name,age,location,specialty,favLanguage,catchPhrase}){ 
+    super({name,age,location,specialty,favLanguage,catchPhrase});
+    this.specialty = specialty;
     this.favLanguage = favLanguage;
     this.catchPhrase = catchPhrase;
   }
