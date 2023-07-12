@@ -92,7 +92,7 @@ class Car {
   }
 
   
-}
+  }}
 
 /*
   TASK 3
