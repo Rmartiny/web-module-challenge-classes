@@ -190,7 +190,13 @@ sprintChallenge(subject){ return `${Student.name} has begun sprint challenge on 
         + `debugsCode` a method that takes in a student object and a subject and returns `{name} debugs {student.name}'s code on {subject}`
 */
 
-class ProjectManager {
+class ProjectManager extends Instructor { constructor(props){
+  super(props);
+  this.gradClassName= props.gradClassName;
+  this.favInstructor = props. favInstructor;
+}
+standup(name,channel) {return `${name} announces to ${channel}, @channel standy times!`}
+debugsCode(name,subject) {return` ${name} debugs ${Student.name}'s code on ${subject}`}
    
 }
 
