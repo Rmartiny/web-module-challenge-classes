@@ -82,10 +82,10 @@ class Car {
     this.odometer = 0;
   }
   fill(gallons){this.tank= this.tank + gallons;}
-  drive(distance){ 
+  drive(dist){ 
     const drivableMiles = this.tank * this.milesPerGallon;
-    if ( distance <= drivableMiles) { this.odometer + distance;
-      this.tank = (distance / this.milesPerGallon);} 
+    if ( dist <= drivableMiles) { this.odometer + dist;
+      this.tank = this.tank-(dist / this.milesPerGallon);} 
       else {this.odometer = this.odometer + drivableMiles;
         this.tank=0;
         return ` I ran out of fuel at ${this.odometer} miles!`;
@@ -193,10 +193,10 @@ sprintChallenge(subject){ return `${Student.name} has begun sprint challenge on 
 class ProjectManager extends Instructor { constructor({name,age,location,specialty,favLanguage,catchPhrase,previousBackground,className,favSubject,gradClassName,favInstructor}){
   super({name,age,location,specialty,favLanguage,catchPhrase,previousBackground,className,favSubject,gradClassName,favInstructor});
   this.gradClassName= gradClassName;
-  this.favInstructor =favInstructor;
+  this.favInstructor = favInstructor;
 }
-standup(name,channel) {return `${name} announces to ${channel}, @channel standy times!`}
-debugsCode(name,subject) {return` ${name} debugs ${Student.name}'s code on ${subject}`}
+standup(channel) {return `${this.name} announces to ${channel}, @channel standy times!`}
+debugsCode(subject) {return` ${this.name} debugs ${Student.name}'s code on ${subject}`}
    
 }
 
