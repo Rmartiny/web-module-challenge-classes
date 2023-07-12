@@ -144,7 +144,7 @@ class Instructor extends Lambdasian {
   }
 demo(subject){return ` Today we are learning about${subject}`}
 
-grade(subject){return `${Lambdasian.name} Recives a prefect score on ${subject}`}
+grade(subject){return `${Lambdasian.name} Recives a perfect score on ${subject}`}
 }
 
 /*
