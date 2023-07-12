@@ -50,7 +50,7 @@ class Person {
     this.stomach = [];
 
   }
-   eat(edible){ if (this.stomach.length < 10 ){ this.stomach.push(edible)};}
+   eat(edible){ if (this.stomach.length < 10 ){ this.stomach.push(edible)}}
 
    poop(){ this.stomach= []
 
@@ -163,8 +163,8 @@ grade(subject){return `${Student.name} Recives a prefect score on ${subject}`}
         + `sprintChallenge` similar to PRAssignment but returns `student.name has begun sprint challenge on {subject}`
 */
 
-class Student extends Lambdasian { constructor ({name,age,location,speciality,favLanguage,catchPhrase,previousBackground,className,favSubject}){
-  super({name,age,location,speciality,favLanguage,catchPhrase,previousBackground,className,favSubject});
+class Student extends Lambdasian { constructor ({name,age,location,specialty,favLanguage,catchPhrase,previousBackground,className,favSubject}){
+  super({name,age,location,specialty,favLanguage,catchPhrase,previousBackground,className,favSubject});
   this.previousBackground= previousBackground;
   this.className= className;
   this.favSubject= favSubject;
@@ -190,8 +190,8 @@ sprintChallenge(subject){ return `${Student.name} has begun sprint challenge on 
         + `debugsCode` a method that takes in a student object and a subject and returns `{name} debugs {student.name}'s code on {subject}`
 */
 
-class ProjectManager extends Instructor { constructor({name,age,location,speciality,favLanguage,catchPhrase,previousBackground,className,favSubject,gradClassName,favInstructor}){
-  super({name,age,location,speciality,favLanguage,catchPhrase,previousBackground,className,favSubject,gradClassName,favInstructor});
+class ProjectManager extends Instructor { constructor({name,age,location,specialty,favLanguage,catchPhrase,previousBackground,className,favSubject,gradClassName,favInstructor}){
+  super({name,age,location,specialty,favLanguage,catchPhrase,previousBackground,className,favSubject,gradClassName,favInstructor});
   this.gradClassName= gradClassName;
   this.favInstructor =favInstructor;
 }
