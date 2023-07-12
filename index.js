@@ -47,13 +47,17 @@ class Person {
   constructor (props){
     this.name = props.name;
     this.age = props.age;
-    
+    this.stomach = [];
 
   }
-   eat(){
+   eat(edible){ if (this.stomach.length < 10 ){ this.stomach.push(edible)};}
+
+   poop(){ this.stomach= []
 
    }
+   toString(){ return `${this.name}, ${this.age}.`}
   
+
 }
 
 /*
