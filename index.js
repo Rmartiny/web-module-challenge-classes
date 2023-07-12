@@ -84,7 +84,7 @@ class Car {
   fill(gallons){this.tank= this.tank + gallons;}
   drive(dist){ 
     const drivableMiles = this.tank * this.milesPerGallon;
-    if ( dist <= drivableMiles) { this.odometer + dist;
+    if ( dist <= drivableMiles) { this.odometer = this.odometer + dist;
       this.tank = this.tank-(dist / this.milesPerGallon);} 
       else {this.odometer = this.odometer + drivableMiles;
         this.tank=0;
@@ -144,7 +144,7 @@ class Instructor extends Lambdasian {
   }
 demo(subject){return ` Today we are learning about${subject}`}
 
-grade(subject){return `${Student.name} Recives a prefect score on ${subject}`}
+grade(subject){return `${Lambdasian.name} Recives a prefect score on ${subject}`}
 }
 
 /*
@@ -171,8 +171,8 @@ class Student extends Lambdasian { constructor ({name,age,location,specialty,fav
 
 }
 listSubjects(){ return ` Loving ${this.favSubject}!`}
-PRAssignments(subject){ return `${Student.name} has submitted a PR for ${subject}`}
-sprintChallenge(subject){ return `${Student.name} has begun sprint challenge on ${subject}`}
+PRAssignments(subject){ return `${Lambdasian.name} has submitted a PR for ${subject}`}
+sprintChallenge(subject){ return `${Lambdasian.name} has begun sprint challenge on ${subject}`}
    
 }
 
@@ -196,7 +196,7 @@ class ProjectManager extends Instructor { constructor({name,age,location,special
   this.favInstructor = favInstructor;
 }
 standup(channel) {return `${this.name} announces to ${channel}, @channel standy times!`}
-debugsCode(subject) {return` ${this.name} debugs ${Student.name}'s code on ${subject}`}
+debugsCode(subject) {return` ${this.name} debugs ${Lambdasian.name}'s code on ${subject}`}
    
 }
 
