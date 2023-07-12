@@ -163,7 +163,16 @@ grade(subject){return `${Student.name} Recives a prefect score on ${subject}`}
         + `sprintChallenge` similar to PRAssignment but returns `student.name has begun sprint challenge on {subject}`
 */
 
-class Student {
+class Student extends Lambdasian { constructor (props){
+  super(props);
+  this.previousBackground= props.previousBackground;
+  this.className= props.className;
+  this.favSubject= props.favSubject;
+
+}
+listSubjects(){ return ` Loving ${this.favSubject}!`}
+PRAssignments(subject){ return `${Student.name} has submitted a PR for ${subject}`}
+sprintChallenge(subject){ return `${Student.name} has begun sprint challenge on ${subject}`}
    
 }
 
