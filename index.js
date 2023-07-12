@@ -44,9 +44,9 @@ class Airplane {
 */
 
 class Person {
-  constructor (props){
-    this.name = props.name;
-    this.age = props.age;
+  constructor (name,age){
+    this.name = name;
+    this.age = age;
     this.stomach = [];
 
   }
@@ -75,9 +75,9 @@ class Person {
 */
 
 class Car {
-  constructor(props){
-    this.model= props.model;
-    this.milesPerGallon = props.milesPerGallon;
+  constructor(model, milesPerGallon){
+    this.model= model;
+    this.milesPerGallon = milesPerGallon;
     this.tank = 0;
     this.odometer = 0;
   }
@@ -108,10 +108,10 @@ class Car {
 */
 
 class Lambdasian {
-  constructor(props) {
-    this.name = props.name;
-    this.age = props.age;
-    this.location = props.location;
+  constructor(name,age,location) {
+    this.name =name;
+    this.age = age;
+    this.location = location;
 
   }
   speak(){
@@ -136,11 +136,11 @@ class Lambdasian {
 */
 
 class Instructor extends Lambdasian { 
-  constructor(props){ 
-    super(props);
-    this.speciality= props.speciality;
-    this.favLanguage = props.favLanguage;
-    this.catchPhrase = props.catchPhrase;
+  constructor(name,age,location,speciality,favLanguage,catchPhrase){ 
+    super(name,age,location,speciality,favLanguage,catchPhrase);
+    this.speciality= speciality;
+    this.favLanguage = favLanguage;
+    this.catchPhrase = catchPhrase;
   }
 demo(subject){return ` Today we are learning about${subject}`}
 
@@ -163,11 +163,11 @@ grade(subject){return `${Student.name} Recives a prefect score on ${subject}`}
         + `sprintChallenge` similar to PRAssignment but returns `student.name has begun sprint challenge on {subject}`
 */
 
-class Student extends Lambdasian { constructor (props){
-  super(props);
-  this.previousBackground= props.previousBackground;
-  this.className= props.className;
-  this.favSubject= props.favSubject;
+class Student extends Lambdasian { constructor (name,age,location,speciality,favLanguage,catchPhrase,previousBackground,className,favSubject){
+  super(name,age,location,speciality,favLanguage,catchPhrase,previousBackground,className,favSubject);
+  this.previousBackground= previousBackground;
+  this.className= className;
+  this.favSubject= favSubject;
 
 }
 listSubjects(){ return ` Loving ${this.favSubject}!`}
@@ -190,10 +190,10 @@ sprintChallenge(subject){ return `${Student.name} has begun sprint challenge on 
         + `debugsCode` a method that takes in a student object and a subject and returns `{name} debugs {student.name}'s code on {subject}`
 */
 
-class ProjectManager extends Instructor { constructor(props){
-  super(props);
-  this.gradClassName= props.gradClassName;
-  this.favInstructor = props. favInstructor;
+class ProjectManager extends Instructor { constructor(name,age,location,speciality,favLanguage,catchPhrase,previousBackground,className,favSubject,gradClassName,favInstructor){
+  super(name,age,location,speciality,favLanguage,catchPhrase,previousBackground,className,favSubject,gradClassName,favInstructor);
+  this.gradClassName= gradClassName;
+  this.favInstructor =favInstructor;
 }
 standup(name,channel) {return `${name} announces to ${channel}, @channel standy times!`}
 debugsCode(name,subject) {return` ${name} debugs ${Student.name}'s code on ${subject}`}
