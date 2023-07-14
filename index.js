@@ -167,12 +167,12 @@ class Student extends Lambdasian { constructor ({name,age,location,specialty,fav
   super({name,age,location,specialty,favLanguage,catchPhrase,previousBackground,className,favSubjects});
   this.previousBackground= previousBackground;
   this.className= className;
-  this.favSubjects= favSubjects;
+  this.favSubjects= [];
 
 }
 listSubjects(){ return ` Loving ${this.favSubject}!`}
-PRAssignments(subject){ return `${Lambdasian.name} has submitted a PR for ${subject}`}
-sprintChallenge(subject){ return `${Lambdasian.name} has begun sprint challenge on ${subject}`}
+PRAssignments(student,subject){ return `${student.name} has submitted a PR for ${subject}`}
+sprintChallenge(student,subject){ return `${student.name} has begun sprint challenge on ${subject}`}
    
 }
 
