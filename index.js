@@ -144,7 +144,7 @@ class Instructor extends Lambdasian {
   }
 demo(subject){return ` Today we are learning about${subject}`}
 
-grade(subject){return `${student.name} Recives a perfect score on ${subject}`}
+grade(subject){return `${Student.name} Recives a perfect score on ${subject}`}
 }
 
 /*
@@ -163,11 +163,11 @@ grade(subject){return `${student.name} Recives a perfect score on ${subject}`}
         + `sprintChallenge` similar to PRAssignment but returns `student.name has begun sprint challenge on {subject}`
 */
 
-class Student extends Lambdasian { constructor ({name,age,location,specialty,favLanguage,catchPhrase,previousBackground,className,favSubject}){
-  super({name,age,location,specialty,favLanguage,catchPhrase,previousBackground,className,favSubject});
+class Student extends Lambdasian { constructor ({name,age,location,specialty,favLanguage,catchPhrase,previousBackground,className,favSubjects}){
+  super({name,age,location,specialty,favLanguage,catchPhrase,previousBackground,className,favSubjects});
   this.previousBackground= previousBackground;
   this.className= className;
-  this.favSubject= favSubject;
+  this.favSubjects= favSubjects;
 
 }
 listSubjects(){ return ` Loving ${this.favSubject}!`}
