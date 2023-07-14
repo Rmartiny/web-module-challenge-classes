@@ -171,7 +171,7 @@ class Student extends Lambdasian { constructor ({name,age,location,specialty,fav
 
 }
 listSubjects(){ return ` Loving ${this.favSubjects}!`}
-PRAssignments(subject){ return `${this.name} has submitted a PR for ${subject}`}
+PRAssignment(subject){ return `${this.name} has submitted a PR for ${subject}`}
 sprintChallenge(subject){ return `${this.name} has begun sprint challenge on ${subject}`}
    
 }
