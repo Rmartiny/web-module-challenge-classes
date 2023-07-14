@@ -190,13 +190,13 @@ sprintChallenge(student,subject){ return `${student.name} has begun sprint chall
         + `debugsCode` a method that takes in a student object and a subject and returns `{name} debugs {student.name}'s code on {subject}`
 */
 
-class ProjectManager extends Instructor { constructor({name,age,location,specialty,favLanguage,catchPhrase,previousBackground,className,favSubject,gradClassName,favInstructor}){
-  super({name,age,location,specialty,favLanguage,catchPhrase,previousBackground,className,favSubject,gradClassName,favInstructor});
+class ProjectManager extends Instructor { constructor({name,age,location,specialty,favLanguage,catchPhrase,previousBackground,className,favSubjects,gradClassName,favInstructor}){
+  super({name,age,location,specialty,favLanguage,catchPhrase,previousBackground,className,favSubjects,gradClassName,favInstructor});
   this.gradClassName= gradClassName;
   this.favInstructor = favInstructor;
 }
 standup(channel) {return `${this.name} announces to ${channel}, @channel standy times!`}
-debugsCode(subject) {return` ${this.name} debugs ${Lambdasian.name}'s code on ${subject}`}
+debugsCode(student,subject) {return` ${this.name} debugs ${student.name}'s code on ${subject}`}
    
 }
 
